@@ -1,0 +1,220 @@
+/opt/conda/lib/python3.11/site-packages/controlnet_aux/mediapipe_face/mediapipe_face_common.py:7: UserWarning: The module 'mediapipe' is not installed. The package will have limited functionality. Please install it using the command: pip install 'mediapipe'
+  warnings.warn(
+[2025-03-18 10:04:45,423] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+load model
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.70it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.02it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.97it/s]
+Device set to use cuda
+load model
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files: 100%|██████████| 17/17 [00:00<00:00, 136596.11it/s]
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Some weights of the model checkpoint were not used when initializing CLIPTextModel: 
+ ['text_model.embeddings.position_ids']
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00,  8.71it/s]Loading pipeline components...:  43%|████▎     | 3/7 [00:00<00:01,  2.78it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  5.00it/s]Loading pipeline components...:  86%|████████▌ | 6/7 [00:02<00:00,  1.47it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:02<00:00,  2.34it/s]
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+Some weights of the model checkpoint were not used when initializing ControlNetModel: 
+ ['control_add_embedding.linear_1.bias, control_add_embedding.linear_1.weight, control_add_embedding.linear_2.bias, control_add_embedding.linear_2.weight, spatial_ch_projs.bias, spatial_ch_projs.weight, task_embedding, transformer_layes.0.attn.in_proj_bias, transformer_layes.0.attn.in_proj_weight, transformer_layes.0.attn.out_proj.bias, transformer_layes.0.attn.out_proj.weight, transformer_layes.0.ln_1.bias, transformer_layes.0.ln_1.weight, transformer_layes.0.ln_2.bias, transformer_layes.0.ln_2.weight, transformer_layes.0.mlp.c_fc.bias, transformer_layes.0.mlp.c_fc.weight, transformer_layes.0.mlp.c_proj.bias, transformer_layes.0.mlp.c_proj.weight']
+loaded lightning_xl
+loaded Animetoon_Negatives
+loaded DeepNegative_xl_v1
+TI loaded!
+load model
+Fetching 17 files:   0%|          | 0/17 [00:00<?, ?it/s]Fetching 17 files: 100%|██████████| 17/17 [00:00<00:00, 75773.82it/s]
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]Some weights of the model checkpoint were not used when initializing CLIPTextModel: 
+ ['text_model.embeddings.position_ids']
+Loading pipeline components...:  29%|██▊       | 2/7 [00:00<00:00,  8.98it/s]Loading pipeline components...:  43%|████▎     | 3/7 [00:00<00:01,  2.70it/s]Loading pipeline components...:  71%|███████▏  | 5/7 [00:01<00:00,  4.86it/s]Loading pipeline components...:  86%|████████▌ | 6/7 [00:02<00:00,  1.47it/s]Loading pipeline components...: 100%|██████████| 7/7 [00:02<00:00,  2.34it/s]
+loaded lightning_xl
+loaded Animetoon_Negatives
+loaded DeepNegative_xl_v1
+TI loaded!
+* Running on local URL:  http://127.0.0.1:7860
+
+To create a public link, set `share=True` in `launch()`.
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.30it/s] 50%|█████     | 2/4 [00:00<00:00,  5.08it/s] 75%|███████▌  | 3/4 [00:00<00:00,  6.20it/s]100%|██████████| 4/4 [00:00<00:00,  6.92it/s]100%|██████████| 4/4 [00:00<00:00,  6.03it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  8.13it/s] 50%|█████     | 2/4 [00:00<00:00,  8.30it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.36it/s]100%|██████████| 4/4 [00:00<00:00,  8.39it/s]100%|██████████| 4/4 [00:00<00:00,  8.35it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.59it/s] 50%|█████     | 2/4 [00:00<00:00,  7.77it/s] 75%|███████▌  | 3/4 [00:00<00:00,  7.59it/s]100%|██████████| 4/4 [00:00<00:00,  7.67it/s]100%|██████████| 4/4 [00:00<00:00,  7.66it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.92it/s] 50%|█████     | 2/4 [00:00<00:00,  8.04it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.02it/s]100%|██████████| 4/4 [00:00<00:00,  7.98it/s]100%|██████████| 4/4 [00:00<00:00,  7.98it/s]
+/opt/conda/lib/python3.11/site-packages/gradio/blocks.py:1778: UserWarning: A function (populate_dropdowns) returned too many output values (needed: 2, returned: 10). Ignoring extra values.
+    Output components:
+        [dropdown, dropdown]
+    Output values returned:
+        [{'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}, {'choices': ['None', 'komi', 'wutu', 'zero'], 'value': 'komi', '__type__': 'update'}]
+  warnings.warn(
+saving new character
+Saved: lun;zero;/tmp/gradio/5221e4301106df5ce027e0d30650c8dd344433fe6411196e81a172c43a127cca/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, 
+regen gallery selected character: zero
+modifying character
+character name: zero
+character in line
+['0;komi;komi.png;a cute high school girl, very long purple hair, purple blazer, white inner shirt, purple calf socks, purple school uniform skirt, \n', 'olis;wutu;/tmp/gradio/c3c4b4be956323dca2afd2c25f57d341e9a565d014fca9c158f5724268cb8841/image.png;a high school teenager, beautiful eyes, sparkling eyes, (very long hair, very long black hair)1.3, (black school uniform)1.5, (black school uniform skirt)1.2, smiling, \n', 'lun;zero;/tmp/gradio/1abd17775f84827617ff5a24bbbbe1f8c70b185893b4fb478b048f5eb0c8b854/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n']
+regen gallery selected character: zero
+modifying character
+character name: zero
+character in line
+['0;komi;komi.png;a cute high school girl, very long purple hair, purple blazer, white inner shirt, purple calf socks, purple school uniform skirt, \n', 'olis;wutu;/tmp/gradio/c3c4b4be956323dca2afd2c25f57d341e9a565d014fca9c158f5724268cb8841/image.png;a high school teenager, beautiful eyes, sparkling eyes, (very long hair, very long black hair)1.3, (black school uniform)1.5, (black school uniform skirt)1.2, smiling, \n', 'lun;zero;/tmp/gradio/a142d0431d56603cbafe7422258edc0288e12380063016bc2adde390b4472e69/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n']
+regen gallery selected character: zero
+modifying character
+character name: zero
+character in line
+['0;komi;komi.png;a cute high school girl, very long purple hair, purple blazer, white inner shirt, purple calf socks, purple school uniform skirt, \n', 'olis;wutu;/tmp/gradio/c3c4b4be956323dca2afd2c25f57d341e9a565d014fca9c158f5724268cb8841/image.png;a high school teenager, beautiful eyes, sparkling eyes, (very long hair, very long black hair)1.3, (black school uniform)1.5, (black school uniform skirt)1.2, smiling, \n', 'lun;zero;/tmp/gradio/5221e4301106df5ce027e0d30650c8dd344433fe6411196e81a172c43a127cca/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n']
+regen gallery selected character: zero
+char gallery selected character: None
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  8.07it/s] 50%|█████     | 2/4 [00:00<00:00,  8.16it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.20it/s]100%|██████████| 4/4 [00:00<00:00,  8.22it/s]100%|██████████| 4/4 [00:00<00:00,  8.19it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.82it/s] 50%|█████     | 2/4 [00:00<00:00,  8.05it/s] 75%|███████▌  | 3/4 [00:00<00:00,  7.89it/s]100%|██████████| 4/4 [00:00<00:00,  7.92it/s]100%|██████████| 4/4 [00:00<00:00,  7.92it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.90it/s] 50%|█████     | 2/4 [00:00<00:00,  7.74it/s] 75%|███████▌  | 3/4 [00:00<00:00,  7.88it/s]100%|██████████| 4/4 [00:00<00:00,  7.78it/s]100%|██████████| 4/4 [00:00<00:00,  7.80it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  8.16it/s] 50%|█████     | 2/4 [00:00<00:00,  8.06it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.20it/s]100%|██████████| 4/4 [00:00<00:00,  8.14it/s]100%|██████████| 4/4 [00:00<00:00,  8.14it/s]
+CUDAGraph supports dynamic shapes by recording a new graph for each distinct input size. Recording too many CUDAGraphs may lead to extra overhead. We have observed 51 distinct sizes. Please consider the following options for better performance: a) padding inputs to a few fixed number of shapes; or b) set torch._inductor.config.triton.cudagraph_skip_dynamic_graphs=True. Set torch._inductor.config.triton.cudagraph_dynamic_shape_warn_limit=None to silence this warning.
+modifying character
+character name: 
+character in line
+character in line
+character in line
+['0;komi;/tmp/gradio/cbc43445b1a8860339f4fcf998ecbbaa6b85153988b5f8bbafa635da19f3152d/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n', 'olis;wutu;/tmp/gradio/cbc43445b1a8860339f4fcf998ecbbaa6b85153988b5f8bbafa635da19f3152d/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n', 'lun;zero;/tmp/gradio/cbc43445b1a8860339f4fcf998ecbbaa6b85153988b5f8bbafa635da19f3152d/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n']
+regen gallery selected character: 
+modifying character
+character name: 
+character in line
+character in line
+character in line
+['0;komi;/tmp/gradio/5ab7fcff69dcaf388f07b8f12fdd388fb0a948f75fea23c0ae40fd6be4f5c918/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n', 'olis;wutu;/tmp/gradio/5ab7fcff69dcaf388f07b8f12fdd388fb0a948f75fea23c0ae40fd6be4f5c918/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n', 'lun;zero;/tmp/gradio/5ab7fcff69dcaf388f07b8f12fdd388fb0a948f75fea23c0ae40fd6be4f5c918/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, \n']
+regen gallery selected character: 
+char gallery selected character: None
+image generate start
+llm res: wide shot of a sunlit school courtyard, cherry blossoms drifting as Yuki stands alone, her very long black hair cascading like ink down her back, black school uniform crisp and bold; close-up of her sparkling eyes catching a glint of trouble—bullies cornering a friend; a sunlit school courtyard, cherry blossoms, side-view of she sprints forward, fists tightening; a sunlit school courtyard, cherry blossoms, full-body portrait of Yuki leaping into action, her long hair trailing like a banner, landing a fierce spinning heel kick to a bully’s chest; a sunlit school courtyard, cherry blossoms
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  5.75it/s] 50%|█████     | 2/4 [00:00<00:00,  6.98it/s] 75%|███████▌  | 3/4 [00:00<00:00,  7.55it/s]100%|██████████| 4/4 [00:00<00:00,  7.85it/s]100%|██████████| 4/4 [00:00<00:00,  7.47it/s]
+/opt/conda/lib/python3.11/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py:118: UserWarning: Specified provider 'CUDAExecutionProvider' is not in available provider names.Available providers: 'AzureExecutionProvider, CPUExecutionProvider'
+  warnings.warn(
+load model
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:01,  2.71it/s] 50%|█████     | 2/4 [00:00<00:00,  2.72it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.63it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  8.14it/s] 50%|█████     | 2/4 [00:00<00:00,  8.27it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.31it/s]100%|██████████| 4/4 [00:00<00:00,  8.31it/s]100%|██████████| 4/4 [00:00<00:00,  8.29it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:01,  2.70it/s] 50%|█████     | 2/4 [00:00<00:00,  3.00it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.12it/s]100%|██████████| 4/4 [00:01<00:00,  3.16it/s]100%|██████████| 4/4 [00:01<00:00,  3.09it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.59it/s] 50%|█████     | 2/4 [00:00<00:00,  8.03it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.19it/s]100%|██████████| 4/4 [00:00<00:00,  8.09it/s]100%|██████████| 4/4 [00:00<00:00,  8.06it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.25it/s] 50%|█████     | 2/4 [00:00<00:00,  3.23it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.25it/s]100%|██████████| 4/4 [00:01<00:00,  3.19it/s]100%|██████████| 4/4 [00:01<00:00,  3.21it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  8.14it/s] 50%|█████     | 2/4 [00:00<00:00,  8.28it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.34it/s]100%|██████████| 4/4 [00:00<00:00,  8.37it/s]100%|██████████| 4/4 [00:00<00:00,  8.33it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.10it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.20it/s] 50%|█████     | 2/4 [00:00<00:00,  3.23it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.25it/s]100%|██████████| 4/4 [00:01<00:00,  3.26it/s]100%|██████████| 4/4 [00:01<00:00,  3.25it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.20it/s] 50%|█████     | 2/4 [00:00<00:00,  3.24it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.26it/s]100%|██████████| 4/4 [00:01<00:00,  3.26it/s]100%|██████████| 4/4 [00:01<00:00,  3.25it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.08it/s] 50%|█████     | 2/4 [00:00<00:00,  3.15it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.14it/s]100%|██████████| 4/4 [00:01<00:00,  3.13it/s]100%|██████████| 4/4 [00:01<00:00,  3.13it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.24it/s] 50%|█████     | 2/4 [00:00<00:00,  3.24it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.24it/s]100%|██████████| 4/4 [00:01<00:00,  3.24it/s]100%|██████████| 4/4 [00:01<00:00,  3.24it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.10it/s] 50%|█████     | 2/4 [00:00<00:00,  3.14it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.15it/s]100%|██████████| 4/4 [00:01<00:00,  3.16it/s]100%|██████████| 4/4 [00:01<00:00,  3.15it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.11it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.20it/s] 50%|█████     | 2/4 [00:00<00:00,  3.23it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.24it/s]100%|██████████| 4/4 [00:01<00:00,  3.24it/s]100%|██████████| 4/4 [00:01<00:00,  3.23it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.21it/s] 50%|█████     | 2/4 [00:00<00:00,  3.20it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.22it/s]100%|██████████| 4/4 [00:01<00:00,  3.21it/s]100%|██████████| 4/4 [00:01<00:00,  3.21it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.16it/s] 50%|█████     | 2/4 [00:00<00:00,  3.22it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.22it/s]100%|██████████| 4/4 [00:01<00:00,  3.22it/s]100%|██████████| 4/4 [00:01<00:00,  3.22it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.13it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.24it/s] 50%|█████     | 2/4 [00:00<00:00,  3.25it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.26it/s]100%|██████████| 4/4 [00:01<00:00,  3.27it/s]100%|██████████| 4/4 [00:01<00:00,  3.27it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.22it/s] 50%|█████     | 2/4 [00:00<00:00,  3.25it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.26it/s]100%|██████████| 4/4 [00:01<00:00,  3.25it/s]100%|██████████| 4/4 [00:01<00:00,  3.25it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.13it/s] 50%|█████     | 2/4 [00:00<00:00,  2.80it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.63it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.13it/s] 50%|█████     | 2/4 [00:00<00:00,  2.80it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.13it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+llm res: dynamic overhead shot of the courtyard chaos, Yuki weaving through foes, saying "Tz..."; upper-body close-up of her face, sweat beading, beautiful eyes blazing with resolve; front-view as she parries a wild punch, countering with a rapid-fire elbow strike to the jaw; lower-body shot of her executing a low crescent kick, black school uniform skirt swirling as she sweeps two foes off their feet;  full body portrait, Yuki delivering a high snap kick to a thug’s chin, saying "Where are you going!"; full body portrait, Yuki weaving through foes, saying "Tz..."; full body portrait, Yuki executing a low crescent kick, black school uniform skirt swirling as she sweeps two foes off their feet.
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.87it/s] 50%|█████     | 2/4 [00:00<00:00,  8.14it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.26it/s]100%|██████████| 4/4 [00:00<00:00,  8.31it/s]100%|██████████| 4/4 [00:00<00:00,  8.24it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:01,  2.93it/s] 50%|█████     | 2/4 [00:00<00:00,  2.75it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.68it/s]100%|██████████| 4/4 [00:01<00:00,  2.63it/s]100%|██████████| 4/4 [00:01<00:00,  2.67it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  8.16it/s] 50%|█████     | 2/4 [00:00<00:00,  8.28it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.32it/s]100%|██████████| 4/4 [00:00<00:00,  8.32it/s]100%|██████████| 4/4 [00:00<00:00,  8.30it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.01it/s] 50%|█████     | 2/4 [00:00<00:00,  3.13it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.18it/s]100%|██████████| 4/4 [00:01<00:00,  3.21it/s]100%|██████████| 4/4 [00:01<00:00,  3.18it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.96it/s] 50%|█████     | 2/4 [00:00<00:00,  8.14it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.23it/s]100%|██████████| 4/4 [00:00<00:00,  8.25it/s]100%|██████████| 4/4 [00:00<00:00,  8.21it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.16it/s] 50%|█████     | 2/4 [00:00<00:00,  3.21it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.23it/s]100%|██████████| 4/4 [00:01<00:00,  3.23it/s]100%|██████████| 4/4 [00:01<00:00,  3.22it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.94it/s] 50%|█████     | 2/4 [00:00<00:00,  8.10it/s] 75%|███████▌  | 3/4 [00:00<00:00,  8.20it/s]100%|██████████| 4/4 [00:00<00:00,  8.24it/s]100%|██████████| 4/4 [00:00<00:00,  8.19it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.08it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.11it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.21it/s] 50%|█████     | 2/4 [00:00<00:00,  3.23it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.23it/s]100%|██████████| 4/4 [00:01<00:00,  3.24it/s]100%|██████████| 4/4 [00:01<00:00,  3.23it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.20it/s] 50%|█████     | 2/4 [00:00<00:00,  3.22it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.23it/s]100%|██████████| 4/4 [00:01<00:00,  3.24it/s]100%|██████████| 4/4 [00:01<00:00,  3.23it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.06it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.68it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.12it/s] 50%|█████     | 2/4 [00:00<00:00,  3.14it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.14it/s]100%|██████████| 4/4 [00:01<00:00,  3.16it/s]100%|██████████| 4/4 [00:01<00:00,  3.15it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.00it/s] 50%|█████     | 2/4 [00:00<00:00,  3.03it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.12it/s]100%|██████████| 4/4 [00:01<00:00,  3.17it/s]100%|██████████| 4/4 [00:01<00:00,  3.13it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.10it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.09it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.71it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.18it/s] 50%|█████     | 2/4 [00:00<00:00,  3.20it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.22it/s]100%|██████████| 4/4 [00:01<00:00,  3.22it/s]100%|██████████| 4/4 [00:01<00:00,  3.22it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.06it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.69it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.06it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.08it/s] 50%|█████     | 2/4 [00:00<00:00,  2.78it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.70it/s]100%|██████████| 4/4 [00:01<00:00,  2.64it/s]100%|██████████| 4/4 [00:01<00:00,  2.69it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.06it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.69it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.21it/s] 50%|█████     | 2/4 [00:00<00:00,  3.20it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.22it/s]100%|██████████| 4/4 [00:01<00:00,  3.23it/s]100%|██████████| 4/4 [00:01<00:00,  3.22it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.10it/s] 50%|█████     | 2/4 [00:00<00:00,  3.15it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.17it/s]100%|██████████| 4/4 [00:01<00:00,  3.19it/s]100%|██████████| 4/4 [00:01<00:00,  3.17it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:01,  2.95it/s] 50%|█████     | 2/4 [00:00<00:00,  2.74it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.63it/s]100%|██████████| 4/4 [00:01<00:00,  2.67it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.15it/s] 50%|█████     | 2/4 [00:00<00:00,  3.18it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.21it/s]100%|██████████| 4/4 [00:01<00:00,  3.22it/s]100%|██████████| 4/4 [00:01<00:00,  3.21it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.17it/s] 50%|█████     | 2/4 [00:00<00:00,  3.19it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.19it/s]100%|██████████| 4/4 [00:01<00:00,  3.19it/s]100%|██████████| 4/4 [00:01<00:00,  3.19it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.01it/s] 50%|█████     | 2/4 [00:00<00:00,  2.76it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.68it/s]100%|██████████| 4/4 [00:01<00:00,  2.63it/s]100%|██████████| 4/4 [00:01<00:00,  2.68it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.03it/s] 50%|█████     | 2/4 [00:00<00:00,  2.76it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.68it/s]100%|██████████| 4/4 [00:01<00:00,  2.63it/s]100%|██████████| 4/4 [00:01<00:00,  2.68it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.06it/s] 50%|█████     | 2/4 [00:00<00:00,  3.10it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.13it/s]100%|██████████| 4/4 [00:01<00:00,  3.15it/s]100%|██████████| 4/4 [00:01<00:00,  3.13it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.06it/s] 50%|█████     | 2/4 [00:00<00:00,  3.09it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.10it/s]100%|██████████| 4/4 [00:01<00:00,  3.12it/s]100%|██████████| 4/4 [00:01<00:00,  3.11it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.05it/s] 50%|█████     | 2/4 [00:00<00:00,  3.08it/s] 75%|███████▌  | 3/4 [00:00<00:00,  3.09it/s]100%|██████████| 4/4 [00:01<00:00,  3.09it/s]100%|██████████| 4/4 [00:01<00:00,  3.09it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.00it/s] 50%|█████     | 2/4 [00:00<00:00,  2.75it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.67it/s]100%|██████████| 4/4 [00:01<00:00,  2.64it/s]100%|██████████| 4/4 [00:01<00:00,  2.68it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:01,  2.95it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.68it/s]100%|██████████| 4/4 [00:01<00:00,  2.61it/s]100%|██████████| 4/4 [00:01<00:00,  2.67it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.05it/s] 50%|█████     | 2/4 [00:00<00:00,  2.76it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.69it/s]100%|██████████| 4/4 [00:01<00:00,  2.64it/s]100%|██████████| 4/4 [00:01<00:00,  2.69it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.07it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.68it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:01,  2.95it/s] 50%|█████     | 2/4 [00:00<00:00,  2.72it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.66it/s]100%|██████████| 4/4 [00:01<00:00,  2.62it/s]100%|██████████| 4/4 [00:01<00:00,  2.66it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.07it/s] 50%|█████     | 2/4 [00:00<00:00,  2.78it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.68it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.08it/s] 50%|█████     | 2/4 [00:00<00:00,  2.79it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.69it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+image generate start
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.06it/s] 50%|█████     | 2/4 [00:00<00:00,  2.77it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.69it/s]100%|██████████| 4/4 [00:01<00:00,  2.65it/s]100%|██████████| 4/4 [00:01<00:00,  2.70it/s]
+CUDAGraph supports dynamic shapes by recording a new graph for each distinct input size. Recording too many CUDAGraphs may lead to extra overhead. We have observed 51 distinct sizes. Please consider the following options for better performance: a) padding inputs to a few fixed number of shapes; or b) set torch._inductor.config.triton.cudagraph_skip_dynamic_graphs=True. Set torch._inductor.config.triton.cudagraph_dynamic_shape_warn_limit=None to silence this warning.
+image generate start
+llm res: wide shot, a sunlit school courtyard, cherry blossoms drifting, Yuki stands alone, her very long purple hair cascading like ink down her back, purple school uniform crisp and bold, perfection style, perfection, perfect, midjourneyv6.1, max details, Photo, product photo, (expressive)1.7, masterpiece, raw quality, best quality, HD, extremely detailed, high definition, stunning beautiful, soft features, masterpiece, raw quality, best quality, extremely detailed, stunning beautiful, high definition, HD,(masterpiece)1.2, (best quality)1.2, (ultra-detailed)1.2, (unity 8k wallpaper)1.2, (illustration)1.1, (anime style)1.1, intricate, fluid simulation, sharp edges, (glossy)1.2, (Smooth)1.2, (detailed eyes)1.2, a cute high school girl, very long purple hair, purple blazer, white inner shirt, purple calf socks, purple school uniform skirt, side-view of her purple school uniform skirt fluttering as she sprints forward, fists tightening, a sunlit school courtyard, cherry blossoms, perfection style, perfection, perfect, midjourneyv6.1,
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  7.36it/s] 50%|█████     | 2/4 [00:00<00:00,  7.72it/s] 75%|███████▌  | 3/4 [00:00<00:00,  7.84it/s]100%|██████████| 4/4 [00:00<00:00,  7.92it/s]100%|██████████| 4/4 [00:00<00:00,  7.83it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:00<00:00,  3.03it/s] 50%|█████     | 2/4 [00:00<00:00,  2.75it/s] 75%|███████▌  | 3/4 [00:01<00:00,  2.67it/s]100%|██████████| 4/4 [00:01<00:00,  2.63it/s]100%|██████████| 4/4 [00:01<00:00,  2.68it/s]
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.11/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/gradio/blocks.py", line 2055, in process_api
+    data = await self.postprocess_data(block_fn, result["prediction"], state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/gradio/blocks.py", line 1811, in postprocess_data
+    self.validate_outputs(block_fn, predictions)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.11/site-packages/gradio/blocks.py", line 1766, in validate_outputs
+    raise ValueError(
+ValueError: A  function (create_manga) didn't return enough output values (needed: 4, returned: 1).
+    Output components:
+        [image, image, image, image]
+    Output values returned:
+        [<PIL.Image.Image image mode=RGB size=992x1280 at 0x7F415C684B50>]

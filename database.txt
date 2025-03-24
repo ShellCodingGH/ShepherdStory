@@ -1,0 +1,3 @@
+0;komi;komi.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, 
+olis;wutu;/tmp/gradio/5ab7fcff69dcaf388f07b8f12fdd388fb0a948f75fea23c0ae40fd6be4f5c918/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, 
+lun;zero;/tmp/gradio/5ab7fcff69dcaf388f07b8f12fdd388fb0a948f75fea23c0ae40fd6be4f5c918/image.png;an elegant high school girl, very long purple hair, purple blazer, white inner shirt, long purple school uniform trousers, 
