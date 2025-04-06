@@ -1,0 +1,61 @@
+## ComfyUI-Manager: installing dependencies done.
+[2025-04-04 23:30:46.693] ** ComfyUI startup time: 2025-04-04 23:30:46.693
+[2025-04-04 23:30:46.693] ** Platform: Linux
+[2025-04-04 23:30:46.693] ** Python version: 3.11.10 | packaged by conda-forge | (main, Oct 16 2024, 01:27:36) [GCC 13.3.0]
+[2025-04-04 23:30:46.693] ** Python executable: /opt/conda/bin/python
+[2025-04-04 23:30:46.694] ** ComfyUI Path: /root/comfy/ComfyUI
+[2025-04-04 23:30:46.694] ** ComfyUI Base Folder Path: /root/comfy/ComfyUI
+[2025-04-04 23:30:46.694] ** User directory: /root/comfy/ComfyUI/user
+[2025-04-04 23:30:46.694] ** ComfyUI-Manager config path: /root/comfy/ComfyUI/user/default/ComfyUI-Manager/config.ini
+[2025-04-04 23:30:46.694] ** Log path: /root/comfy/ComfyUI/user/comfyui.log
+
+Prestartup times for custom nodes:
+[2025-04-04 23:30:47.756]    2.2 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+[2025-04-04 23:30:47.756] 
+[2025-04-04 23:30:49.663] Checkpoint files will always be loaded safely.
+[2025-04-04 23:30:50.689] Total VRAM 81110 MB, total RAM 515681 MB
+[2025-04-04 23:30:50.690] pytorch version: 2.5.1+cu124
+[2025-04-04 23:30:50.690] Set vram state to: NORMAL_VRAM
+[2025-04-04 23:30:50.691] Device: cuda:0 NVIDIA H100 80GB HBM3 : cudaMallocAsync
+[2025-04-04 23:30:52.103] Using pytorch attention
+[2025-04-04 23:30:53.176] ComfyUI version: 0.3.27
+[2025-04-04 23:30:53.342] ComfyUI frontend version: 1.14.6
+[2025-04-04 23:30:53.343] [Prompt Server] web root: /opt/conda/lib/python3.11/site-packages/comfyui_frontend_package/static
+[2025-04-04 23:30:53.611] ### Loading: ComfyUI-Manager (V3.31.9)
+[2025-04-04 23:30:53.612] [ComfyUI-Manager] network_mode: public
+[2025-04-04 23:30:53.673] ### ComfyUI Version: v0.3.27-19-g721253cb | Released on '2025-04-03'
+[2025-04-04 23:30:53.683] 
+Import times for custom nodes:
+[2025-04-04 23:30:53.683]    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/websocket_image_save.py
+[2025-04-04 23:30:53.684]    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+[2025-04-04 23:30:53.684] 
+[2025-04-04 23:30:53.693] Starting server
+
+[2025-04-04 23:30:53.693] To see the GUI go to: http://127.0.0.1:8188
+[2025-04-04 23:30:53.816] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2025-04-04 23:30:53.866] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2025-04-04 23:30:53.918] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2025-04-04 23:30:53.956] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2025-04-04 23:30:54.085] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2025-04-04 23:30:58.516] FETCH ComfyRegistry Data: 5/80
+[2025-04-04 23:31:03.354] FETCH ComfyRegistry Data: 10/80
+[2025-04-04 23:31:08.146] FETCH ComfyRegistry Data: 15/80
+[2025-04-04 23:31:12.990] FETCH ComfyRegistry Data: 20/80
+[2025-04-04 23:31:17.917] FETCH ComfyRegistry Data: 25/80
+[2025-04-04 23:31:22.913] FETCH ComfyRegistry Data: 30/80
+[2025-04-04 23:31:27.943] FETCH ComfyRegistry Data: 35/80
+[2025-04-04 23:31:32.715] FETCH ComfyRegistry Data: 40/80
+[2025-04-04 23:31:37.605] FETCH ComfyRegistry Data: 45/80
+[2025-04-04 23:31:42.540] FETCH ComfyRegistry Data: 50/80
+[2025-04-04 23:31:47.604] FETCH ComfyRegistry Data: 55/80
+[2025-04-04 23:31:52.439] FETCH ComfyRegistry Data: 60/80
+[2025-04-04 23:31:57.998] FETCH ComfyRegistry Data: 65/80
+[2025-04-04 23:32:03.024] FETCH ComfyRegistry Data: 70/80
+[2025-04-04 23:32:08.113] FETCH ComfyRegistry Data: 75/80
+[2025-04-04 23:32:13.593] FETCH ComfyRegistry Data: 80/80
+[2025-04-04 23:32:14.093] FETCH ComfyRegistry Data [DONE]
+[2025-04-04 23:32:14.254] [ComfyUI-Manager] default cache updated: https://api.comfy.org/nodes
+[2025-04-04 23:32:14.265] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json [DONE]
+[2025-04-04 23:32:14.537] [ComfyUI-Manager] All startup tasks have been completed.
+[2025-04-04 23:33:01.613] 
+Stopped server

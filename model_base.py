@@ -46,7 +46,7 @@ from diffusers.utils import export_to_video
 from diffusers.models.attention_processor import AttnProcessor2_0
 from compel import Compel
 from compel import ReturnedEmbeddingsType
-import deepspeed
+# import deepspeed
 from huggingface_hub import hf_hub_download
 
 torch.backends.cuda.matmul.allow_tf32 = True
@@ -73,7 +73,7 @@ hidden_negative = ", internal-organs-outside-the-body, internal-organs-visible, 
 MAX_INPUT_TOKEN_LENGTH = 4096
 MAX_NEW_TOKENS = 1024
 # base = "checkpoints/envy_2D.safetensors"
-base = "checkpoints/AtomicXL.safetensors"
+base = "/root/comfy/ComfyUI/models/checkpoints/AtomicXL.safetensors"
 repo = "ByteDance/SDXL-Lightning"
 ckpt = "sdxl_lightning_4step_lora.safetensors" # Use the correct ckpt for your step setting!
 adapter_names=["sdxl_lightning", "jeweled_eyes", "epic_fantasy", "aidma_upgrader", "sdxl_enhance", "aidma_mj", "handXL"]
@@ -134,15 +134,33 @@ class Model():
 
                                                                             )
     
+    def load_ip(self):
+
+        self.pipe = StableDiffusionXLPipeline.from_single_file(base, 
+                                                                torch_dtype=torch.bfloat16, 
+                                                                vae=vae,  
+                                                                variant="fp16",
+                                                                            ).to(device)
+    
+    
     def load_rmbg(self):
         providers = ['CUDAExecutionProvider', 'CPUExecutionProvider']
         model_path = huggingface_hub.hf_hub_download("skytnt/anime-seg", "isnetis.onnx")
         self.pipe = rt.InferenceSession(model_path, providers=providers)
         
-    def load_lora(self, adapter_weights, chibi=False):
-        self.pipe.load_lora_weights(hf_hub_download(repo, ckpt))
-        self.pipe.fuse_lora()
-        print("loaded lightning_xl")
+    def load_lora(self, adapter_weights, chibi=False, ip=False):
+        
+        if ip:
+            self.pipe.load_ip_adapter("h94/IP-Adapter", subfolder="sdxl_models", weight_name="ip-adapter_sdxl.bin", low_cpu_mem_usage=True)
+            # self.pipe.fuse_lora()
+            self.pipe.set_ip_adapter_scale(0.5)
+            print("loaded ipadapter lora")
+            
+        else:
+            self.pipe.load_lora_weights(hf_hub_download(repo, ckpt))
+            self.pipe.fuse_lora()
+            print("loaded lightning_xl")
+        
         # if isinstance(self.pipe, StableDiffusionXLControlNetReferencePipeline):
         #     self.pipe.load_lora_weights("latent-consistency/lcm-lora-sdxl", adapter_name="lcm_xl",low_cpu_mem_usage=True)
         #     self.pipe.fuse_lora()
@@ -179,6 +197,12 @@ class Model():
         with concurrent.futures.ThreadPoolExecutor(max_workers=12000) as executor:
             future = executor.submit(self.load_pose,)
             future.result()
+            
+    def multi_thread_load_ip(self, ):
+        # conduct multi-threading
+        with concurrent.futures.ThreadPoolExecutor(max_workers=12000) as executor:
+            future = executor.submit(self.load_ip,)
+            future.result()
 
     
     def multi_thread_load_rmbg(self, ):
@@ -188,10 +212,10 @@ class Model():
             future.result()
 
     
-    def multi_thread_load_lora(self, adapter_weights=[1., 0., 0.3, 0.5, 0.5, 0.5, 1.], chibi=False):
+    def multi_thread_load_lora(self, adapter_weights=[1., 0., 0.3, 0.5, 0.5, 0.5, 1.], chibi=False, ip=False):
         # conduct multi-threading
         with concurrent.futures.ThreadPoolExecutor(max_workers=12000) as executor:
-            future = executor.submit(self.load_lora, adapter_weights, chibi)
+            future = executor.submit(self.load_lora, adapter_weights, chibi, ip)
             future.result()
 
     
@@ -247,6 +271,12 @@ class Model():
                 # load textual inversions
                 self.multi_thread_load_ti()
 
+            case "ip":
+                self.multi_thread_load_ip()
+                # load LoRAs
+                self.multi_thread_load_lora(adapter_weights=[1., 0.2, 0.3, 0.5, 0.5, 0.5, 1.], ip=True)
+                # load textual inversions
+                self.multi_thread_load_ti()
             case "rmbg":
                 # load pipe
                 self.multi_thread_load_rmbg()
@@ -258,11 +288,11 @@ class Model():
             # self.pipe.vae.to(memory_format=torch.channels_last)
             # self.pipe.unet = torch.compile(pipe.unet, mode="max-autotune", fullgraph=True)
             # self.pipe.vae.decode = torch.compile(pipe.vae.decode, mode="max-autotune", fullgraph=True)
-            self.pipe.fuse_qkv_projections()
+            # self.pipe.fuse_qkv_projections()
             self.pipe.scheduler = EulerDiscreteScheduler.from_config(self.pipe.scheduler.config, timestep_spacing="trailing")
             # self.pipe.scheduler = DPMSolverMultistepScheduler.from_config(self.pipe.scheduler.config, use_karras_sigmas=True, timestep_spacing="trailing")
             # self.pipe.scheduler = LCMScheduler.from_config(self.pipe.scheduler.config)
-            self.pipe.enable_attention_slicing()
+            # self.pipe.enable_attention_slicing()
             self.pipe.enable_xformers_memory_efficient_attention()
             self.pipe.to(device)
             # init deepspeed inference engine
@@ -317,7 +347,7 @@ class Model():
         
         return prompt_embeds, pooled_prompt_embeds, negative_prompt_embeds, negative_pooled_prompt_embeds
 
-    def gen_batch_img(self, height, width, prompt_embeds, pooled_prompt_embeds, negative_prompt_embeds, negative_pooled_prompt_embeds, num_inference_steps=4, input_img=None, control_image=None, num_images=4, guidance_scale=0.):
+    def gen_batch_img(self, height, width, prompt_embeds, pooled_prompt_embeds, negative_prompt_embeds, negative_pooled_prompt_embeds, num_inference_steps=4, input_img=None, control_image=None, num_images=4, guidance_scale=0., ip=False, seed=42):
         res = []
         for x in range(num_images):
             i = 0
@@ -339,9 +369,22 @@ class Model():
                         reference_adain=False,
                         style_fidelity=1.,
                         guidance_scale=guidance_scale,
-
+                        # generator=torch.Generator(device=device).manual_seed(seed),
                         clip_skip=2,
                     ).images[0]
+                    res_image.save("mine_{}.png".format(x))
+                elif ip:
+                    res_image = self.pipe(height=height, width=width, 
+                                     prompt_embeds=prompt_embeds, 
+                                     pooled_prompt_embeds=pooled_prompt_embeds, 
+                                     negative_prompt_embeds=negative_prompt_embeds, 
+                                     ip_adapter_image=input_img,
+                                     negative_pooled_prompt_embeds=negative_pooled_prompt_embeds, 
+                                     guidance_scale=guidance_scale,
+                                    #  generator=torch.Generator(device=device).manual_seed(seed),
+                                     num_inference_steps=num_inference_steps).images[0]
+                    res_image.save("ip_{}.png".format(x))
+                    
                 else:
                     res_image = self.pipe(height=height, width=width, 
                                     prompt_embeds=prompt_embeds, 
@@ -351,7 +394,6 @@ class Model():
                                     guidance_scale=guidance_scale,
                                     num_inference_steps=num_inference_steps,
                                     clip_skip=2,
-                                    
                                     ).images[0]
                     res_image.save("prototype{}.png".format(x))
                 i += 1
@@ -423,6 +465,25 @@ class Img2poseModel(Model):
 
         # generating 4 result images
         res1 = self.gen_batch_img(height, width, prompt_embeds, pooled_prompt_embeds, negative_prompt_embeds, negative_pooled_prompt_embeds, 4, image, control_image=control_image, num_images=1,)
+
+        return res1
+    
+class IPModel(Model):
+    def __init__(self):
+        super().__init__("ip")
+        
+    def infer(self, **kwargs):
+        # get argument names from kwargs for convenience
+        prompt, negative_prompt, input_img, height, width = kwargs["prompt"], kwargs["negative_prompt"], kwargs["input_img"], kwargs["height"], kwargs["width"]
+        self.check_input_img(input_img)
+        
+        # load image
+        image = load_image(input_img)
+
+        prompt_embeds, pooled_prompt_embeds, negative_prompt_embeds, negative_pooled_prompt_embeds = self.compel_prompts(prompt, negative_prompt)
+
+        # generating 4 result images
+        res1 = self.gen_batch_img(height, width, prompt_embeds, pooled_prompt_embeds, negative_prompt_embeds, negative_pooled_prompt_embeds, 30, image, num_images=1, guidance_scale=7.5, ip=True)
 
         return res1
 

@@ -1,0 +1,43 @@
+## ComfyUI-Manager: installing dependencies done.
+[2025-04-04 23:33:04.786] ** ComfyUI startup time: 2025-04-04 23:33:04.786
+[2025-04-04 23:33:04.786] ** Platform: Linux
+[2025-04-04 23:33:04.786] ** Python version: 3.11.10 | packaged by conda-forge | (main, Oct 16 2024, 01:27:36) [GCC 13.3.0]
+[2025-04-04 23:33:04.786] ** Python executable: /opt/conda/bin/python
+[2025-04-04 23:33:04.786] ** ComfyUI Path: /root/comfy/ComfyUI
+[2025-04-04 23:33:04.786] ** ComfyUI Base Folder Path: /root/comfy/ComfyUI
+[2025-04-04 23:33:04.786] ** User directory: /root/comfy/ComfyUI/user
+[2025-04-04 23:33:04.786] ** ComfyUI-Manager config path: /root/comfy/ComfyUI/user/default/ComfyUI-Manager/config.ini
+[2025-04-04 23:33:04.786] ** Log path: /root/comfy/ComfyUI/user/comfyui.log
+
+Prestartup times for custom nodes:
+[2025-04-04 23:33:05.855]    2.2 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+[2025-04-04 23:33:05.855] 
+[2025-04-04 23:33:07.773] Checkpoint files will always be loaded safely.
+[2025-04-04 23:33:08.674] Total VRAM 81110 MB, total RAM 515681 MB
+[2025-04-04 23:33:08.674] pytorch version: 2.5.1+cu124
+[2025-04-04 23:33:08.675] Set vram state to: NORMAL_VRAM
+[2025-04-04 23:33:08.675] Device: cuda:0 NVIDIA H100 80GB HBM3 : cudaMallocAsync
+[2025-04-04 23:33:10.066] Using pytorch attention
+[2025-04-04 23:33:11.165] ComfyUI version: 0.3.27
+[2025-04-04 23:33:11.338] ComfyUI frontend version: 1.14.6
+[2025-04-04 23:33:11.339] [Prompt Server] web root: /opt/conda/lib/python3.11/site-packages/comfyui_frontend_package/static
+[2025-04-04 23:33:11.607] ### Loading: ComfyUI-Manager (V3.31.9)
+[2025-04-04 23:33:11.607] [ComfyUI-Manager] network_mode: private
+[2025-04-04 23:33:11.664] ### ComfyUI Version: v0.3.27-19-g721253cb | Released on '2025-04-03'
+[2025-04-04 23:33:11.673] 
+Import times for custom nodes:
+[2025-04-04 23:33:11.674]    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/websocket_image_save.py
+[2025-04-04 23:33:11.674]    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+[2025-04-04 23:33:11.674] 
+[2025-04-04 23:33:11.684] Starting server
+
+[2025-04-04 23:33:11.684] To see the GUI go to: http://127.0.0.1:8188
+[2025-04-04 23:33:11.803] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2025-04-04 23:33:11.814] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2025-04-04 23:33:11.869] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2025-04-04 23:33:11.911] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2025-04-04 23:33:11.959] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2025-04-04 23:33:11.960] [ComfyUI-Manager] The private comfyregistry is not yet supported in `network_mode=private`.
+[2025-04-04 23:33:11.960] [ComfyUI-Manager] All startup tasks have been completed.
+[2025-04-04 23:36:02.871] 
+Stopped server
