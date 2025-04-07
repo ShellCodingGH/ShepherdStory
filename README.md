@@ -3,7 +3,7 @@
 # 部署 (Install)
 1. ```pip install comfy-cli```
 2. ```comfy install```
-3. download the zip for these custom_nodes: https://github.com/SeargeDP/SeargeSDXL, https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes, https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
+3. download the zip for these custom nodes and put into the ```custom_nodes``` folder: https://github.com/SeargeDP/SeargeSDXL, https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes, https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
 5. go to notebooks/comfyui_colab.ipynb, run this notebook. Note in future running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
 6. in terminal, run the following commands:
 ```
