@@ -3,7 +3,7 @@
 # 部署 (Install)
 1. ```pip install comfy-cli```
 2. ```comfy install```
-3. download this repo as zip, extract all files in this repo into your /root folder or a folder of your choice. *For 深睿: 请把my_utils.py、notebooks/comfyui_colab.ipynb和 ui.py文件中的 ```working_folder```改为你的 working directory*
+3. download this repo as zip, extract all files in this repo into your /root folder or a folder of your choice. 
 4. download the zip for these custom nodes and put into the ```custom_nodes``` folder: https://github.com/SeargeDP/SeargeSDXL, https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes, https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
 5. use your CivitAI token to download these base model weights and put into the ```models/checkpoints``` folder: https://civitai.com/models/370529/atomix-anime-xl
 
@@ -22,8 +22,8 @@ wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning
 wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true -O comfy/ComfyUI/models/controlnet/controlnet_sdxl_union_promax.safetensors
 ```
 
-9. put comfyui_colab.ipynb *in this repo* into ```notebook``` folder,  run this notebook. Note after the very first time of running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
-10. wait until the cell finishes outputting
+9. put comfyui_colab.ipynb *in this repo* into ```notebook``` folder,  run this notebook. Note after the very first time of running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)".
+10. wait until the cell finishes outputting, note the green tick won't appear instead the cell will appear in the running status with a spinning curly arrow.
 11. in terminal, at your working directory run the following commands:
 ```
 mkdir comfy/ComfyUI/output/refer
