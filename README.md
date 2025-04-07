@@ -18,7 +18,7 @@ wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning
 8. download these ControlNet weights and put into the ```models/controlnets``` folder: [[[https://civitai.com/models/370529/atomix-anime-xl]](https://civitai.com/api/download/models/413937?type=Model&format=SafeTensor&size=pruned&fp=fp16)(https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true)](https://huggingface.co/xinsir/controlnet-union-sdxl-1.0/resolve/main/diffusion_pytorch_model_promax.safetensors?download=true)
 
 ```
-wget [https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true](https://huggingface.co/xinsir/controlnet-union-sdxl-1.0/resolve/main/diffusion_pytorch_model_promax.safetensors?download=true) -O comfy/ComfyUI/models/controlnets/controlnet_sdxl_union_promax.safetensors
+wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true -O comfy/ComfyUI/models/controlnets/controlnet_sdxl_union_promax.safetensors
 ```
 
 9. go to notebooks/comfyui_colab.ipynb, run this notebook. Note in future running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
