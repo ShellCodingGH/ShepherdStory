@@ -4,10 +4,10 @@
 1. ```pip install comfy-cli```
 2. ```comfy install```
 3. download the zip for these custom nodes and put into the ```custom_nodes``` folder: https://github.com/SeargeDP/SeargeSDXL, https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes, https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
-4. download these base model weights and put into the ```models/checkpoints``` folder: https://civitai.com/models/370529/atomix-anime-xl
+4. use your CivitAI token to download these base model weights and put into the ```models/checkpoints``` folder: https://civitai.com/models/370529/atomix-anime-xl
 
 ```
-wget "https://civitai.com/api/download/models/413937?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=5f4a57bd4db9e5da2f7e86f0fb6f9237" -O comfy/ComfyUI/models/checkpoints/AtomicXL.safetensors
+wget "https://civitai.com/api/download/models/413937?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=YOUR_CIVITAI_TOKEN" -O comfy/ComfyUI/models/checkpoints/AtomicXL.safetensors
 ```
 6. download these LoRA weights and put into the ```models/loras``` folder: [[https://civitai.com/models/370529/atomix-anime-xl]](https://civitai.com/api/download/models/413937?type=Model&format=SafeTensor&size=pruned&fp=fp16)(https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true)
 
