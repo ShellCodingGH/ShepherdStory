@@ -21,7 +21,7 @@ wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning
 wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true -O comfy/ComfyUI/models/controlnet/controlnet_sdxl_union_promax.safetensors
 ```
 
-9. go to notebooks/comfyui_colab.ipynb, run this notebook. Note in future running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
+9. put comfyui_colab.ipynb *in this repo* into ```notebook``` folder,  run this notebook. Note in future running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
 10. in terminal, run the following commands:
 ```
 apt install nvidia-cuda-toolkit -y
