@@ -3,7 +3,7 @@
 # 部署 (Install)
 1. ```pip install comfy-cli```
 2. ```comfy install```
-3. download this repo as zip, extract all files in this repo into your /root folder or a folder of your choice. *For 深睿: 请把my_utils.py文件中的 ```working_folder```改为你的 working directory*
+3. download this repo as zip, extract all files in this repo into your /root folder or a folder of your choice. *For 深睿: 请把my_utils.py、notebooks/comfyui_colab.ipynb和 ui.py文件中的 ```working_folder```改为你的 working directory*
 4. download the zip for these custom nodes and put into the ```custom_nodes``` folder: https://github.com/SeargeDP/SeargeSDXL, https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes, https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
 5. use your CivitAI token to download these base model weights and put into the ```models/checkpoints``` folder: https://civitai.com/models/370529/atomix-anime-xl
 
@@ -23,8 +23,10 @@ wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning
 ```
 
 9. put comfyui_colab.ipynb *in this repo* into ```notebook``` folder,  run this notebook. Note in future running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
-10. in terminal, run the following commands:
+11. in terminal, at your working directory run the following commands:
 ```
+mkdir comfy/ComfyUI/output/refer
+mkdir comfy/ComfyUI/output/txt2img
 apt install nvidia-cuda-toolkit -y
 pip install -r requirements.txt -U
 apt-get install build-essential -y
