@@ -22,7 +22,8 @@ wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning
 wget https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true -O comfy/ComfyUI/models/controlnet/controlnet_sdxl_union_promax.safetensors
 ```
 
-9. put comfyui_colab.ipynb *in this repo* into ```notebook``` folder,  run this notebook. Note in future running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
+9. put comfyui_colab.ipynb *in this repo* into ```notebook``` folder,  run this notebook. Note after the very first time of running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
+10. wait until the cell finishes outputting
 11. in terminal, at your working directory run the following commands:
 ```
 mkdir comfy/ComfyUI/output/refer
