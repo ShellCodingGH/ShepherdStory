@@ -5,7 +5,7 @@
 2. ```comfy install```
 3. download the zip for these custom nodes and put into the ```custom_nodes``` folder: https://github.com/SeargeDP/SeargeSDXL, https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes, https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
 4. download these base model weights and put into the ```models/checkpoints``` folder: https://civitai.com/models/370529/atomix-anime-xl
-5. download these LoRA weights and put into the ```models/loras``` folder: [https://civitai.com/models/370529/atomix-anime-xl](https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true)
+5. download these LoRA weights and put into the ```models/loras``` folder: [[https://civitai.com/models/370529/atomix-anime-xl]](https://civitai.com/api/download/models/413937?type=Model&format=SafeTensor&size=pruned&fp=fp16)(https://huggingface.co/ByteDance/SDXL-Lightning/resolve/main/sdxl_lightning_4step_lora.safetensors?download=true)
 6. go to notebooks/comfyui_colab.ipynb, run this notebook. Note in future running, only need to re-run cell with title "Run ComfyUI with cloudflared (Recommended Way)"
 7. in terminal, run the following commands:
 ```
